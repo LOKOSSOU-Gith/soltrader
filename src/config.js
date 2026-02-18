@@ -1,4 +1,7 @@
-require('dotenv').config();
+// Charger dotenv uniquement en développement local
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 const config = {
   // Configuration RPC
