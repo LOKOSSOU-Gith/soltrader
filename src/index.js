@@ -70,9 +70,6 @@ class MemecoinBot {
     // Démarrer le monitoring des positions Micro-Sniper
     this.startPositionMonitoring();
 
-    // Démarrer le dashboard web
-    this.dashboardServer = new DashboardServer(this);
-
     // Démarrer le monitoring WebSocket avec stratégie Micro-Sniper
     this.websocketMonitor.startMonitoring(async (tokenDetected) => {
       await this.handleTokenDetectionMicroSniper(tokenDetected);
@@ -81,6 +78,8 @@ class MemecoinBot {
     // Gérer l'arrêt propre
     process.on('SIGINT', () => this.stop());
     process.on('SIGTERM', () => this.stop());
+    
+    console.log('✅ Bot Micro-Sniper démarré avec succès!');
   }
 
   startPositionMonitoring() {

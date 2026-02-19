@@ -4,9 +4,10 @@
   "description": "Bot de trading automatique pour memecoins sur Solana",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node src/server.js",
     "dev": "nodemon src/index.js",
-    "dashboard": "node src/dashboardServer.js"
+    "dashboard": "node src/dashboardServer.js",
+    "bot-only": "node src/index.js"
   },
   "dependencies": {
     "@jup-ag/api": "^0.0.1",
