@@ -11,12 +11,13 @@
   },
   "dependencies": {
     "@jup-ag/api": "^0.0.1",
+    "@solana/spl-token": "^0.4.14",
     "@solana/web3.js": "^1.95.4",
     "axios": "^1.7.9",
     "bigint-buffer": "^1.1.1",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "cors": "^2.8.5"
+    "express": "^4.21.2"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
