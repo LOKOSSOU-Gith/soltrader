@@ -7,7 +7,9 @@
     "start": "node src/server.js",
     "dev": "nodemon src/index.js",
     "dashboard": "node src/dashboardServer.js",
-    "bot-only": "node src/index.js"
+    "bot-only": "node src/index.js",
+    "safe": "node src/safeBot.js",
+    "test": "TEST_MODE=true node src/safeBot.js"
   },
   "dependencies": {
     "@jup-ag/api": "^0.0.1",
