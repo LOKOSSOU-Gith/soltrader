@@ -4,6 +4,7 @@ const Trader = require('./trader');
 const StopLossManager = require('./stopLossManager');
 const TokenValidator = require('./tokenValidator');
 const PositionManager = require('./positionManager');
+const DashboardServer = require('./dashboardServer');
 const config = require('./config');
 
 class MemecoinBot {
@@ -68,6 +69,9 @@ class MemecoinBot {
 
     // Démarrer le monitoring des positions Micro-Sniper
     this.startPositionMonitoring();
+
+    // Démarrer le dashboard web
+    this.dashboardServer = new DashboardServer(this);
 
     // Démarrer le monitoring WebSocket avec stratégie Micro-Sniper
     this.websocketMonitor.startMonitoring(async (tokenDetected) => {

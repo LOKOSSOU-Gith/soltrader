@@ -5,15 +5,17 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "dashboard": "node src/dashboardServer.js"
   },
   "dependencies": {
-    "@jup-ag/api": "^6.0.48",
-    "@solana/spl-token": "^0.4.1",
-    "@solana/web3.js": "^1.87.6",
-    "axios": "^1.13.5",
-    "bs58": "^4.0.1",
-    "dotenv": "^16.3.1"
+    "@jup-ag/api": "^0.0.1",
+    "@solana/web3.js": "^1.95.4",
+    "axios": "^1.7.9",
+    "bigint-buffer": "^1.1.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "cors": "^2.8.5"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
